@@ -1,17 +1,15 @@
-import './App.css'
-import MuiButtons from './components/MuiButtons'
-import MuiIcons from './components/MuiIcons'
-import MuiTypography from './components/MuiTypography'
+import "./App.css";
+import MuiTextInputs from "./components/MuiTextInputs";
 
 function App() {
-
   return (
     <div className="App">
-      <MuiIcons/>
+      <MuiTextInputs />
+      {/* <MuiIcons/>
       <MuiTypography/>
-      <MuiButtons/>
+      <MuiButtons/> */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
