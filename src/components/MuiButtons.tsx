@@ -1,12 +1,11 @@
 import { Button } from "@mui/material";
-import LoadingButton from '@mui/lab/LoadingButton'; 
-import SaveIcon from '@mui/icons-material/Save'
-
+import LoadingButton from "@mui/lab/LoadingButton";
+import SaveIcon from "@mui/icons-material/Save";
 
 const MuiButtons = () => {
   return (
     <div>
-        <h1>Buttons</h1>
+      <h1>Buttons</h1>
       <>
         <h1>Basic button . 3 variants : Text , Contained , Outlined</h1>
         <Button variant="text">Text</Button>
@@ -44,6 +43,7 @@ const MuiButtons = () => {
       <>
         <h2>color</h2>
         <Button color="secondary">Secondary</Button>
+        <Button color="warning">Warning</Button>
         <Button variant="contained" color="success">
           Success
         </Button>
