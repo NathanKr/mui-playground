@@ -1,10 +1,11 @@
 import "./App.css";
-import MuiAlerts from "./components/MuiAlerts";
+import MuiTabs from "./components/MuiTabs";
 
 function App() {
   return (
     <div className="App">
-      <MuiAlerts />
+      <MuiTabs/>
+      {/* <MuiAlerts /> */}
       {/* <MuiTextInputs /> */}
       {/* <MuiIcons/>
       <MuiTypography/>
