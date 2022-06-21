@@ -3,21 +3,21 @@ import Tab from "@mui/material/Tab";
 import { SyntheticEvent, useState } from "react";
 
 export default function MuiTabs() {
-  const [value, setValue] = useState("1");
+  const [tabValue, setTabValue] = useState("1");
 
-  const handleChange = (event: SyntheticEvent, newValue: string) => {
-    setValue(newValue);
+  const handleChange = (event: SyntheticEvent, newTabValue: string) => {
+    setTabValue(newTabValue);
   };
 
   const elems = ["1", "2", "3"].map((it) =>
-    it == value ? <p key={it}>{it}</p> : ""
+    it == tabValue ? <p key={it}>{it}</p> : ""
   );
 
   return (
-    // <Box sx={{ width: "100%" }}> remark because not clear why Box is needed
     <div>
+      <h1>Tabs</h1>
       <Tabs
-        value={value}
+        value={tabValue}
         onChange={handleChange}
         textColor="secondary"
         indicatorColor="secondary"
@@ -29,6 +29,5 @@ export default function MuiTabs() {
       </Tabs>
       {elems}
     </div>
-    // </Box>
   );
 }
