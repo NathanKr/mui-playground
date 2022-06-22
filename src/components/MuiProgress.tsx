@@ -7,18 +7,21 @@ import LinearWithValueLabel from "./LinearProgressWithLabel ";
 const MuiProgress = () => {
   return (
     <div>
+      <h5>CircularProgress</h5>
       <CircularProgress />
-      <br />
       <CircularProgress color="secondary" />
       <CircularProgress color="success" />
       <CircularProgress color="inherit" />
-      <br />
+      <h5>CircularDeterminate</h5>
       <CircularDeterminate />
-      <br />
+      <h5>LinearWithValueLabel</h5>
       <LinearWithValueLabel/>
-      <p>click the following</p>
+      <h5>CircularStatic</h5>
+      <h5>click the following</h5>
       <CircularIntegration />
+      <h5>CircularStatic</h5>
       <CircularStatic />
+      <h5>LinearProgress</h5>
       <LinearProgress />
       <LinearProgress color="secondary" />
       <LinearProgress color="success" />

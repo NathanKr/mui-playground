@@ -9,9 +9,10 @@ import MuiTypography from "./components/MuiTypography";
 import MuiTextInputs from "./components/MuiTextInputs";
 import MuiProgress from "./components/MuiProgress";
 import TabValue from "./types/TabValue";
+import MuiDialog from "./components/MuiDialog";
 
 export default function App() {
-  const [tabValue, setTabValue] = useState<TabValue>(TabValue.Alerts);
+  const [tabValue, setTabValue] = useState<TabValue>(TabValue.Dialog);
 
   const handleChange = (event: SyntheticEvent, newTabValue: TabValue) => {
     setTabValue(newTabValue);
@@ -35,6 +36,8 @@ export default function App() {
         <Tab value={TabValue.TextInputs} label="Text Inputs" />
         <Tab value={TabValue.Typography} label="Typography" />
         <Tab value={TabValue.Progress} label="Progress" />
+        <Tab value={TabValue.Dialog} label="Dialogs"/>
+        
       </Tabs>
       {tabValue == TabValue.Alerts ? <MuiAlerts /> : ""}
       {tabValue == TabValue.Buttons ? <MuiButtons /> : ""}
@@ -43,6 +46,7 @@ export default function App() {
       {tabValue == TabValue.TextInputs ? <MuiTextInputs /> : ""}
       {tabValue == TabValue.Typography ? <MuiTypography /> : ""}
       {tabValue == TabValue.Progress ? <MuiProgress /> : ""}
+      {tabValue == TabValue.Dialog ? <MuiDialog/> : ""}
     </div>
   );
 }
