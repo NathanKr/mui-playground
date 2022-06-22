@@ -7,11 +7,13 @@ import MuiIcons from "./components/MuiIcons";
 import MuiTabs from "./components/MuiTabs";
 import MuiTypography from "./components/MuiTypography";
 import MuiTextInputs from "./components/MuiTextInputs";
+import MuiProgress from "./components/MuiProgress";
+import TabValue from "./types/TabValue";
 
 export default function App() {
-  const [tabValue, setTabValue] = useState("Alerts");
+  const [tabValue, setTabValue] = useState<TabValue>(TabValue.Alerts);
 
-  const handleChange = (event: SyntheticEvent, newTabValue: string) => {
+  const handleChange = (event: SyntheticEvent, newTabValue: TabValue) => {
     setTabValue(newTabValue);
   };
 
@@ -26,19 +28,21 @@ export default function App() {
         indicatorColor="secondary"
         aria-label="secondary tabs example"
       >
-        <Tab value="Alerts" label="Alerts" />
-        <Tab value="Buttons" label="Buttons" />
-        <Tab value="Tabs" label="Tabs" />
-        <Tab value="Icons" label="Icons" />
-        <Tab value="TextInputs" label="Text Inputs" />
-        <Tab value="Typography" label="Typography" />
+        <Tab value={TabValue.Alerts} label="Alerts" />
+        <Tab value={TabValue.Buttons} label="Buttons" />
+        <Tab value={TabValue.Tabs} label="Tabs" />
+        <Tab value={TabValue.Icons} label="Icons" />
+        <Tab value={TabValue.TextInputs} label="Text Inputs" />
+        <Tab value={TabValue.Typography} label="Typography" />
+        <Tab value={TabValue.Progress} label="Progress" />
       </Tabs>
-      {tabValue == 'Alerts' ? <MuiAlerts/> : ''}
-      {tabValue == 'Buttons' ? <MuiButtons/> : ''}
-      {tabValue == 'Tabs' ? <MuiTabs/> : ''}
-      {tabValue == 'Icons' ? <MuiIcons/> : ''}
-      {tabValue == 'TextInputs' ? <MuiTextInputs/> : ''}
-      {tabValue == 'Typography' ? <MuiTypography/> : ''}
+      {tabValue == TabValue.Alerts ? <MuiAlerts /> : ""}
+      {tabValue == TabValue.Buttons ? <MuiButtons /> : ""}
+      {tabValue == TabValue.Tabs ? <MuiTabs /> : ""}
+      {tabValue == TabValue.Icons ? <MuiIcons /> : ""}
+      {tabValue == TabValue.TextInputs ? <MuiTextInputs /> : ""}
+      {tabValue == TabValue.Typography ? <MuiTypography /> : ""}
+      {tabValue == TabValue.Progress ? <MuiProgress /> : ""}
     </div>
   );
 }
