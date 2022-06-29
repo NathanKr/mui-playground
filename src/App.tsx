@@ -10,9 +10,10 @@ import MuiTextInputs from "./components/MuiTextInputs";
 import MuiProgress from "./components/MuiProgress";
 import TabValue from "./types/TabValue";
 import MuiDialog from "./components/MuiDialog";
+import MuiImageList from "./components/MuiImageList";
 
 export default function App() {
-  const [tabValue, setTabValue] = useState<TabValue>(TabValue.Dialog);
+  const [tabValue, setTabValue] = useState<TabValue>(TabValue.ImageList);
 
   const handleChange = (event: SyntheticEvent, newTabValue: TabValue) => {
     setTabValue(newTabValue);
@@ -36,8 +37,8 @@ export default function App() {
         <Tab value={TabValue.TextInputs} label="Text Inputs" />
         <Tab value={TabValue.Typography} label="Typography" />
         <Tab value={TabValue.Progress} label="Progress" />
-        <Tab value={TabValue.Dialog} label="Dialogs"/>
-        
+        <Tab value={TabValue.Dialog} label="Dialogs" />
+        <Tab value={TabValue.ImageList} label="ImageList" />
       </Tabs>
       {tabValue == TabValue.Alerts ? <MuiAlerts /> : ""}
       {tabValue == TabValue.Buttons ? <MuiButtons /> : ""}
@@ -46,7 +47,8 @@ export default function App() {
       {tabValue == TabValue.TextInputs ? <MuiTextInputs /> : ""}
       {tabValue == TabValue.Typography ? <MuiTypography /> : ""}
       {tabValue == TabValue.Progress ? <MuiProgress /> : ""}
-      {tabValue == TabValue.Dialog ? <MuiDialog/> : ""}
+      {tabValue == TabValue.Dialog ? <MuiDialog /> : ""}
+      {tabValue == TabValue.ImageList ? <MuiImageList /> : ""}
     </div>
   );
 }

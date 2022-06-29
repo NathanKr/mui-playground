@@ -6,7 +6,8 @@ enum TabValue  {
     TextInputs,
     Typography,
     Progress,
-    Dialog
+    Dialog,
+    ImageList
 }
 
 export default TabValue;
