@@ -1,3 +1,4 @@
+import MasonryImageList from "./MasonryImageList";
 import StandardImageList from "./StandardImageList";
 import TitlebarImageList from "./TitlebarImageList";
 
@@ -10,6 +11,8 @@ const MuiImageList = () => {
       </div>
       <h3>TitlebarImageList</h3>
       <TitlebarImageList />
+      <h3>MasonryImageList</h3>
+      <MasonryImageList/>
     </div>
   );
 };
