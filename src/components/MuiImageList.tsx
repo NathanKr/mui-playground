@@ -5,6 +5,7 @@ import TitlebarImageList from "./TitlebarImageList";
 const MuiImageList = () => {
   return (
     <div style={{ margin: "auto", width: "50%"}}>
+      <h2>Notice : MUI use here responsive images tricks. Check the attributes of img</h2>
       <h3>StandardImageList</h3>
       <div>
         <StandardImageList />
