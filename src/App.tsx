@@ -13,7 +13,7 @@ import MuiDialog from "./components/MuiDialog";
 import MuiImageList from "./components/MuiImageList";
 
 export default function App() {
-  const [tabValue, setTabValue] = useState<TabValue>(TabValue.ImageList);
+  const [tabValue, setTabValue] = useState<TabValue>(TabValue.Alerts);
 
   const handleChange = (event: SyntheticEvent, newTabValue: TabValue) => {
     setTabValue(newTabValue);
