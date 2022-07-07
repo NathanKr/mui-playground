@@ -11,6 +11,7 @@ import MuiProgress from "./components/MuiProgress";
 import TabValue from "./types/TabValue";
 import MuiDialog from "./components/MuiDialog";
 import MuiImageList from "./components/MuiImageList";
+import MuiDivider from "./components/MuiDivider";
 
 export default function App() {
   const [tabValue, setTabValue] = useState<TabValue>(TabValue.Alerts);
@@ -39,6 +40,7 @@ export default function App() {
         <Tab value={TabValue.Progress} label="Progress" />
         <Tab value={TabValue.Dialog} label="Dialogs" />
         <Tab value={TabValue.ImageList} label="ImageList" />
+        <Tab value={TabValue.Divider} label="Divider" />
       </Tabs>
       {tabValue == TabValue.Alerts ? <MuiAlerts /> : ""}
       {tabValue == TabValue.Buttons ? <MuiButtons /> : ""}
@@ -49,6 +51,7 @@ export default function App() {
       {tabValue == TabValue.Progress ? <MuiProgress /> : ""}
       {tabValue == TabValue.Dialog ? <MuiDialog /> : ""}
       {tabValue == TabValue.ImageList ? <MuiImageList /> : ""}
+      {tabValue == TabValue.Divider ? <MuiDivider /> : ""}
     </div>
   );
 }
