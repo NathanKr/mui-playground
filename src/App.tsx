@@ -12,6 +12,7 @@ import TabValue from "./types/TabValue";
 import MuiDialog from "./components/MuiDialog";
 import MuiImageList from "./components/MuiImageList";
 import MuiDivider from "./components/MuiDivider";
+import MuiSnackBar from "./components/MuiSnackBar";
 
 export default function App() {
   const [tabValue, setTabValue] = useState<TabValue>(TabValue.Alerts);
@@ -41,6 +42,7 @@ export default function App() {
         <Tab value={TabValue.Dialog} label="Dialogs" />
         <Tab value={TabValue.ImageList} label="ImageList" />
         <Tab value={TabValue.Divider} label="Divider" />
+        <Tab value={TabValue.SnackBar} label="SnackBar" />
       </Tabs>
       {tabValue == TabValue.Alerts ? <MuiAlerts /> : ""}
       {tabValue == TabValue.Buttons ? <MuiButtons /> : ""}
@@ -52,6 +54,7 @@ export default function App() {
       {tabValue == TabValue.Dialog ? <MuiDialog /> : ""}
       {tabValue == TabValue.ImageList ? <MuiImageList /> : ""}
       {tabValue == TabValue.Divider ? <MuiDivider /> : ""}
+      {tabValue == TabValue.SnackBar? <MuiSnackBar/> : ""}
     </div>
   );
 }

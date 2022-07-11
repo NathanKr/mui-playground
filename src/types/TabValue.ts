@@ -8,7 +8,8 @@ enum TabValue  {
     Progress,
     Dialog,
     ImageList,
-    Divider
+    Divider,
+    SnackBar
 }
 
 export default TabValue;
