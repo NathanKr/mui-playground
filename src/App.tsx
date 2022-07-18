@@ -15,7 +15,7 @@ import MuiDivider from "./components/MuiDivider";
 import MuiSnackBar from "./components/MuiSnackBar";
 
 export default function App() {
-  const [tabValue, setTabValue] = useState<TabValue>(TabValue.Alerts);
+  const [tabValue, setTabValue] = useState<TabValue>(TabValue.Tabs);
 
   const handleChange = (event: SyntheticEvent, newTabValue: TabValue) => {
     setTabValue(newTabValue);

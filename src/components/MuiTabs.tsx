@@ -1,33 +1,18 @@
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import { SyntheticEvent, useState } from "react";
+import MuiTabsSimple from "./MuiTabsSimple";
+import MuiTabsShowHide from "./MuiTabsShowHide";
 
 export default function MuiTabs() {
-  const [tabValue, setTabValue] = useState("1");
-
-  const handleChange = (event: SyntheticEvent, newTabValue: string) => {
-    setTabValue(newTabValue);
-  };
-
-  const elems = ["1", "2", "3"].map((it) =>
-    it == tabValue ? <p key={it}>{it}</p> : ""
-  );
-
+  
   return (
     <div>
       <h1>Tabs</h1>
-      <Tabs
-        value={tabValue}
-        onChange={handleChange}
-        textColor="secondary"
-        indicatorColor="secondary"
-        aria-label="secondary tabs example"
-      >
-        <Tab value="1" label="Item One" />
-        <Tab value="2" label="Item Two" />
-        <Tab value="3" label="Item Three" />
-      </Tabs>
-      {elems}
+      <h3>Simple</h3>
+      <MuiTabsSimple/>
+      <h3>Show hide</h3>
+      <MuiTabsShowHide/>
     </div>
   );
 }
