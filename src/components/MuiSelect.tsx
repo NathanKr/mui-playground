@@ -15,7 +15,7 @@ export default function MuiSelect() {
 
   return (
     <Box sx={{ minWidth: 120 }}>
-      <FormControl>
+      <FormControl fullWidth>
         <InputLabel id={labelId}>Age</InputLabel>
         <Select
           labelId={labelId}
