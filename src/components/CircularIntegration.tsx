@@ -1,27 +1,27 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import CircularProgress from '@mui/material/CircularProgress';
-import { green } from '@mui/material/colors';
-import Button from '@mui/material/Button';
-import Fab from '@mui/material/Fab';
-import CheckIcon from '@mui/icons-material/Check';
-import SaveIcon from '@mui/icons-material/Save';
+import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
+import { green } from "@mui/material/colors";
+import Button from "@mui/material/Button";
+import Fab from "@mui/material/Fab";
+import CheckIcon from "@mui/icons-material/Check";
+import SaveIcon from "@mui/icons-material/Save";
+import { useEffect, useRef, useState } from "react";
 
 export default function CircularIntegration() {
-  const [loading, setLoading] = React.useState(false);
-  const [success, setSuccess] = React.useState(false);
-  const timer = React.useRef<number>();
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const timer = useRef<number>();
 
   const buttonSx = {
     ...(success && {
       bgcolor: green[500],
-      '&:hover': {
+      "&:hover": {
         bgcolor: green[700],
       },
     }),
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     return () => {
       clearTimeout(timer.current);
     };
@@ -39,8 +39,8 @@ export default function CircularIntegration() {
   };
 
   return (
-    <Box sx={{ display: 'flex', alignItems: 'center' }}>
-      <Box sx={{ m: 1, position: 'relative' }}>
+    <Box sx={{ display: "flex", alignItems: "center" }}>
+      <Box sx={{ m: 1, position: "relative" }}>
         <Fab
           aria-label="save"
           color="primary"
@@ -54,7 +54,7 @@ export default function CircularIntegration() {
             size={68}
             sx={{
               color: green[500],
-              position: 'absolute',
+              position: "absolute",
               top: -6,
               left: -6,
               zIndex: 1,
@@ -62,7 +62,7 @@ export default function CircularIntegration() {
           />
         )}
       </Box>
-      <Box sx={{ m: 1, position: 'relative' }}>
+      <Box sx={{ m: 1, position: "relative" }}>
         <Button
           variant="contained"
           sx={buttonSx}
@@ -76,11 +76,11 @@ export default function CircularIntegration() {
             size={24}
             sx={{
               color: green[500],
-              position: 'absolute',
-              top: '50%',
-              left: '50%',
-              marginTop: '-12px',
-              marginLeft: '-12px',
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              marginTop: "-12px",
+              marginLeft: "-12px",
             }}
           />
         )}

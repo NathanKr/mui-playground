@@ -1,14 +1,15 @@
-
-import * as React from 'react';
-import Stack from '@mui/material/Stack';
-import CircularProgress from '@mui/material/CircularProgress';
+import Stack from "@mui/material/Stack";
+import CircularProgress from "@mui/material/CircularProgress";
+import { useEffect, useState } from "react";
 
 export default function CircularDeterminate() {
-  const [progress, setProgress] = React.useState(0);
+  const [progress, setProgress] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => {
-      setProgress((prevProgress) => (prevProgress >= 100 ? 0 : prevProgress + 10));
+      setProgress((prevProgress) =>
+        prevProgress >= 100 ? 0 : prevProgress + 10
+      );
     }, 800);
 
     return () => {

@@ -1,15 +1,16 @@
 enum TabValue  {
     Alerts,
     Buttons,
-    Tabs,
+    Dialog,
+    Divider,
     Icons,
+    ImageList,
+    Progress,
+    SnackBar,
+    Select,
+    Tabs,
     TextInputs,
     Typography,
-    Progress,
-    Dialog,
-    ImageList,
-    Divider,
-    SnackBar
 }
 
 export default TabValue;
