@@ -16,7 +16,7 @@ import MuiSnackBar from "./components/MuiSnackBar";
 import MuiSelect from "./components/MuiSelect";
 
 export default function App() {
-  const [tabValue, setTabValue] = useState<TabValue>(TabValue.Tabs);
+  const [tabValue, setTabValue] = useState<TabValue>(TabValue.ImageList);
 
   const handleChange = (event: SyntheticEvent, newTabValue: TabValue) => {
     setTabValue(newTabValue);
