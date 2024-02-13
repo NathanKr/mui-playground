@@ -4,8 +4,12 @@ import TitlebarImageList from "./TitlebarImageList";
 
 const MuiImageList = () => {
   return (
-    <div style={{ margin: "auto", width: "50%"}}>
-      <h2>Notice : MUI use here responsive images tricks. Check the attributes of img</h2>
+    <div style={{ margin: "auto", width: "50%" }}>
+      <h2>
+        Notice : MUI use here responsive{" "}
+        <span style={{ color: "orange" }}>(only unsplash ?)</span> images
+        tricks. Check the attributes of img
+      </h2>
       <h3>StandardImageList</h3>
       <div>
         <StandardImageList />
@@ -13,7 +17,7 @@ const MuiImageList = () => {
       <h3>TitlebarImageList</h3>
       <TitlebarImageList />
       <h3>MasonryImageList</h3>
-      <MasonryImageList/>
+      <MasonryImageList />
     </div>
   );
 };
